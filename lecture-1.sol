@@ -53,8 +53,11 @@ contract lecture1{
     //     return string(abi.encodePacked(a," ",b));
     // }
 
-    function evenRequire(int256 num) public pure {
-       require(num % 2 == 0, "ERROR: Num is Odd");
-    }
+    // function evenRequire(int256 num) public pure {
+    //    require(num % 2 == 0, "ERROR: Num is Odd");
+    // }
 
+    function getOwner() public view returns (address) {
+        return msg.sender;
+    }
 }
