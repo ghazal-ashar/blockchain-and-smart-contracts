@@ -23,10 +23,10 @@ contract DummyToken{
     }
 
      function mint(address recipient, uint amount) public {
-        require(msg.sender==owner,"only owner can mint");
+        require(msg.sender==owner,"Only owner can mint");
         require(recipient != address(0), "Cannot mint to zero address");
-        require(amount>0,"Amount must be greater than 0");
-        require(limit<=TotalSupply,"Limit Reached");
+        require(amount>0, "Amount must be greater than 0");
+        require(limit + amount <= TotalSupply, "Limit Reached"); // Prevents exceeding total supply
         balanceof[recipient] += amount;
     }
 
