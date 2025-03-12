@@ -4,10 +4,10 @@ pragma solidity ^0.8.20;
 contract DummyToken {
     mapping(address => uint) public balanceof;
     
-    uint public limit = 200000; // Max mint per transaction
-    uint public TotalSupply = 500000;
-    uint public mintedSupply = 0; // Track total minted tokens
-    address public owner;
+    uint limit = 200000; // Max mint per transaction
+    uint TotalSupply = 500000;
+    uint mintedSupply = 0; // Track total minted tokens
+    address owner;
 
     constructor() {
         owner = msg.sender; // Set the deployer as the contract owner
